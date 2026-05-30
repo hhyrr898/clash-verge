@@ -1,11 +1,11 @@
 import { readFile } from "node:fs/promises";
 
-const siteUrl = (process.env.SITE_URL || "").replace(/\/$/, "");
-const indexNowKey = process.env.BING_INDEXNOW_KEY || "";
+const siteUrl = (process.env.SITE_URL || process.env.SITE_DOMAIN || "").replace(/\/$/, "");
+const indexNowKey = process.env.BING_INDEXNOW_KEY || process.env.INDEXNOW_KEY || "";
 const mode = process.env.INDEXNOW_SCOPE || "updated";
 
 if (!siteUrl || !indexNowKey) {
-  console.log("SITE_URL or BING_INDEXNOW_KEY is missing, skip IndexNow.");
+  console.log("SITE_URL/SITE_DOMAIN or BING_INDEXNOW_KEY/INDEXNOW_KEY is missing, skip IndexNow.");
   process.exit(0);
 }
 

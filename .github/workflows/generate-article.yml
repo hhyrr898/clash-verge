@@ -36,7 +36,7 @@ jobs:
       - name: Generate article
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || vars.SITE_DOMAIN }}
           ARTICLE_COUNT: ${{ github.event.inputs.count || '1' }}
         run: npm run generate:article
 
@@ -62,7 +62,7 @@ jobs:
       - name: Submit changed URLs
         if: steps.commit.outputs.changed == 'true'
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
-          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
+          SITE_URL: ${{ vars.SITE_URL || vars.SITE_DOMAIN }}
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY || secrets.INDEXNOW_KEY }}
           INDEXNOW_SCOPE: ${{ github.event.inputs.indexnow_scope || 'updated' }}
         run: node scripts/submit-indexnow.mjs
