@@ -7,6 +7,7 @@ const siteUrl = (process.env.SITE_URL || "https://example.com").replace(/\/$/, "
 const apiKey = process.env.GEMINI_API_KEY || "";
 const outDir = path.join(process.cwd(), "src", "blog");
 const generated = [];
+const runStamp = new Date().toISOString().replace(/[-:T.Z]/g, "").slice(0, 14);
 
 const categories = ["安装教程", "配置指南", "使用技巧", "连接设置", "桌面端", "移动端"];
 const tagPool = [
@@ -40,7 +41,7 @@ for (let i = 0; i < count; i++) {
   const fallbackTitle = `${titleSeeds[index]} ${new Date().toISOString().slice(0, 10)}`;
   const article = await createArticle(fallbackTitle, index);
   const slug = slugify(article.title);
-  const fileName = `${new Date().toISOString().slice(0, 10)}-${slug}.md`;
+  const fileName = `${new Date().toISOString().slice(0, 10)}-${runStamp}-${slug}.md`;
   const filePath = path.join(outDir, fileName);
   const tags = ["posts", ...tagPool[index % tagPool.length]];
   const category = categories[index % categories.length];
