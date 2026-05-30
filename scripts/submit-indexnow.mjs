@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 
-const siteUrl = (process.env.SITE_URL || process.env.SITE_DOMAIN || "").replace(/\/$/, "");
+const siteUrl = normalizeSiteUrl(process.env.SITE_URL || process.env.SITE_DOMAIN || "");
 const indexNowKey = process.env.BING_INDEXNOW_KEY || process.env.INDEXNOW_KEY || "";
 const mode = process.env.INDEXNOW_SCOPE || "updated";
 
@@ -9,7 +9,14 @@ if (!siteUrl || !indexNowKey) {
   process.exit(0);
 }
 
-const host = new URL(siteUrl).hostname;
+let host = "";
+try {
+  host = new URL(siteUrl).hostname;
+} catch {
+  console.log("SITE_URL/SITE_DOMAIN is invalid, skip IndexNow. Use a value like https://example.com.");
+  process.exit(0);
+}
+
 const urlList = mode === "all" ? await readUrlsFromSitemap() : await readGeneratedUrls();
 
 if (!urlList.length) {
@@ -47,4 +54,11 @@ async function readUrlsFromSitemap() {
   } catch {
     return [];
   }
+}
+
+function normalizeSiteUrl(value) {
+  const trimmed = String(value || "").trim().replace(/\/+$/, "");
+  if (!trimmed) return "";
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
 }

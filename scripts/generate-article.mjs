@@ -3,7 +3,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 
 const count = Math.max(1, Math.min(9, Number(process.env.ARTICLE_COUNT || "1")));
-const siteUrl = (process.env.SITE_URL || "https://example.com").replace(/\/$/, "");
+const siteUrl = normalizeSiteUrl(process.env.SITE_URL || process.env.SITE_DOMAIN || "https://example.com");
 const apiKey = process.env.GEMINI_API_KEY || "";
 const outDir = path.join(process.cwd(), "src", "blog");
 const generated = [];
@@ -131,4 +131,11 @@ function slugify(input) {
 
 function yamlString(value) {
   return JSON.stringify(String(value || ""));
+}
+
+function normalizeSiteUrl(value) {
+  const trimmed = String(value || "").trim().replace(/\/+$/, "");
+  if (!trimmed) return "";
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
 }
