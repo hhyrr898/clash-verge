@@ -1,0 +1,67 @@
+name: Generate Clash Verge Article
+
+on:
+  schedule:
+    - cron: "10 16 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Generate 1-9 articles"
+        required: false
+        default: "1"
+      indexnow_scope:
+        description: "updated or all"
+        required: false
+        default: "updated"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Generate article
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          ARTICLE_COUNT: ${{ github.event.inputs.count || '1' }}
+        run: npm run generate:article
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit changes
+        id: commit
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/blog generated-urls.json
+          git commit -m "Add generated Clash Verge article"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Submit changed URLs
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
+          INDEXNOW_SCOPE: ${{ github.event.inputs.indexnow_scope || 'updated' }}
+        run: node scripts/submit-indexnow.mjs

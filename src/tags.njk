@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+pageTitle: Clash Verge Tags 内容索引
+description: 通过 Tags 快速查看 Clash Verge 相关主题内容。
+permalink: /tags/
+---
+<main class="light-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="color:#0f5db8;">Tags</p>
+        <h1 class="page-title-white">Clash Verge Tags 内容索引</h1>
+        <p>按系统、功能与使用场景整理文章入口。</p>
+      </div>
+      <a class="soft-button" style="color:#152033;" href="/blog/">博客列表</a>
+    </div>
+    <div class="tag-grid">
+      {% for tag in collections.tagList %}
+      <a class="tag-card" href="{{ tag | tagUrl }}">
+        <strong>{{ tag }}</strong>
+        <span>查看相关内容</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</main>

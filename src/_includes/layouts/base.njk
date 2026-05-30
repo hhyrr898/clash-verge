@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ pageTitle or title }} | {{ site.brand }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="alternate icon" href="/assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css">
+    {% if video %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": {{ title | dump | safe }},
+        "description": {{ videoDescription or description | dump | safe }},
+        "thumbnailUrl": ["https://tse-mm.bing.com/th?q={{ imageKeyword or title | urlencode }}"],
+        "uploadDate": "{{ page.date | htmlDateString }}",
+        "contentUrl": "{{ site.url }}{{ video }}"
+      }
+    </script>
+    {% endif %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="{{ site.name }}">
+          <img src="{{ site.logo }}" alt="{{ site.brand }} 标识" width="42" height="42">
+          <span>{{ site.brand }} Hub</span>
+        </a>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="/">首页</a>
+          <a href="/blog/">博客</a>
+          <a href="/dows.html">下载中心</a>
+          <a href="/tags/">Tags</a>
+        </nav>
+      </div>
+    </header>
+    {{ content | safe }}
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>{{ site.brand }} Hub</h2>
+          <p>围绕跨平台客户端、桌面体验、移动端设置与日常使用场景整理内容。</p>
+        </section>
+        <nav aria-label="底部导航">
+          <a href="/">首页</a>
+          <a href="/blog/">博客</a>
+          <a href="/download.html">下载中心</a>
+          <a href="/sitemap.xml">站点地图</a>
+        </nav>
+      </div>
+    </footer>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3J1iExMgyFcatcVQ",ck:"3J1iExMgyFcatcVQ"})</script>
+  </body>
+</html>

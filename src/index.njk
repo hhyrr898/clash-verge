@@ -1,0 +1,140 @@
+---
+layout: layouts/base.njk
+pageTitle: Clash Verge客户端下载
+description: Clash Verge 下载、安装、配置与日常使用内容集合，覆盖 Windows、macOS、Android 与 iOS 场景。
+---
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Clash Verge客户端下载</h1>
+        <p class="lead">整理 Clash Verge 的版本选择、桌面端设置、移动端连接、订阅管理与常见场景说明，帮助用户快速完成客户端准备与日常使用。</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="/dows.html">进入下载中心</a>
+          <a class="secondary-button" href="/dows.html">其他版本下载</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Clash Verge 状态卡片">
+        <img src="https://tse-mm.bing.com/th?q=Clash%20Verge%20dashboard" alt="Clash Verge 控制面板概念图">
+        <dl>
+          <div><dt>桌面平台</dt><dd>Windows / macOS</dd></div>
+          <div><dt>移动平台</dt><dd>Android / iOS</dd></div>
+          <div><dt>内容主题</dt><dd>安装与配置</dd></div>
+          <div><dt>更新节奏</dt><dd>持续整理</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="platform" class="light-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="home-section-title">平台选择</h2>
+        </div>
+        <a class="soft-button" href="/download.html">打开下载中心</a>
+      </div>
+      <div class="download-grid">
+        <article class="download-card"><div><div class="icon">Win</div><h3>Windows 版</h3><p>适合日常办公电脑、游戏电脑与多账户桌面环境。</p></div><a href="/download.html#windows">查看说明</a></article>
+        <article class="download-card"><div><div class="icon">Mac</div><h3>macOS 版</h3><p>适合 MacBook、iMac 与菜单栏常驻使用场景。</p></div><a href="/download.html#macos">查看说明</a></article>
+        <article class="download-card"><div><div class="icon">And</div><h3>Android 版</h3><p>适合安卓手机、平板与备用移动设备。</p></div><a href="/download.html#android">查看说明</a></article>
+        <article class="download-card"><div><div class="icon">iOS</div><h3>iOS 版</h3><p>适合 iPhone、iPad 与跨设备使用需求。</p></div><a href="/download.html#ios">查看说明</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="light-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="home-section-title">入门目录</h2>
+        </div>
+        <a class="soft-button" href="/blog/">查看全部文章</a>
+      </div>
+      {% set cards = [
+        ["Clash Verge Windows 安装流程", "Windows 环境下的安装包选择、首次启动与界面认识。", "/blog/clash-verge-windows-install/"],
+        ["Clash Verge macOS 版本说明", "苹果电脑上的授权提示、菜单栏入口与代理开关位置。", "/blog/clash-verge-macos-setup/"],
+        ["Clash Verge Android 使用准备", "移动设备安装前的权限检查与连接方式说明。", "/blog/clash-verge-android-guide/"],
+        ["Clash Verge iOS 连接思路", "结合系统网络设置理解 iPhone 与 iPad 的连接流程。", "/blog/clash-verge-ios-guide/"],
+        ["Clash Verge 订阅导入方法", "从链接到配置文件，整理常见导入方式与检查点。", "/blog/clash-verge-subscription-import/"],
+        ["Clash Verge 规则模式说明", "理解直连、代理与规则选择的日常使用差异。", "/blog/clash-verge-rule-mode/"],
+        ["Clash Verge 节点延迟查看", "通过延迟信息判断当前连接是否顺畅。", "/blog/clash-verge-latency-check/"],
+        ["Clash Verge 配置备份方式", "保存常用配置，便于换机或重装后恢复。", "/blog/clash-verge-backup-config/"]
+      ] %}
+      <div class="card-grid">
+        {% for card in cards %}
+        <article class="feature-card">
+          <a class="post-image-link" href="{{ card[2] }}" aria-label="打开 {{ card[0] }}">
+            <img src="https://tse-mm.bing.com/th?q={{ card[0] | urlencode }}" alt="{{ card[0] }} 配图" loading="lazy">
+          </a>
+          <h3><a href="{{ card[2] }}">{{ card[0] }}</a></h3>
+          <p>{{ card[1] }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="latest" class="light-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="home-section-title">近期文章</h2>
+        </div>
+        <a class="soft-button" href="/blog/">浏览文章列表</a>
+      </div>
+      <div class="post-list">
+        {% for post in collections.posts | limit(12) %}
+        <article class="post-card">
+          <a class="post-image-link" href="{{ post.url }}" aria-label="打开 {{ post.data.title }}">
+            <img src="https://tse-mm.bing.com/th?q={{ post.data.imageKeyword or post.data.title | urlencode }}" alt="{{ post.data.title }} 配图" loading="lazy">
+          </a>
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dateText }}</time>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p>{{ post.data.description }}</p>
+          <div class="tags">
+            {% for tag in post.data.tags %}
+              {% if tag != "posts" %}<span>{{ tag }}</span>{% endif %}
+            {% endfor %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="scenes" class="light-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>使用场景</h2>
+        </div>
+      </div>
+      {% set sceneItems = [
+        ["Clash Verge 远程办公连接检查", "/blog/clash-verge-office-network/"],
+        ["Clash Verge 影音应用分流设置", "/blog/clash-verge-video-app/"],
+        ["Clash Verge 游戏延迟观察", "/blog/clash-verge-gaming-latency/"],
+        ["Clash Verge 家庭路由配合", "/blog/clash-verge-family-device/"],
+        ["Clash Verge 多设备订阅同步", "/blog/clash-verge-family-device/"],
+        ["Clash Verge 备用配置整理", "/blog/clash-verge-backup-config/"],
+        ["Clash Verge 日常开关习惯", "/blog/clash-verge-system-proxy/"],
+        ["Clash Verge 系统代理说明", "/blog/clash-verge-system-proxy/"],
+        ["Clash Verge DNS 设置理解", "/blog/clash-verge-dns-setting/"],
+        ["Clash Verge 规则组切换", "/blog/clash-verge-routing-group/"],
+        ["Clash Verge 连接日志查看", "/blog/clash-verge-log-check/"],
+        ["Clash Verge 轻量使用流程", "/blog/clash-verge-dashboard-guide/"]
+      ] %}
+      <div class="card-grid">
+        {% for item in sceneItems %}
+        <article class="feature-card">
+          <a class="post-image-link" href="{{ item[1] }}" aria-label="打开 {{ item[0] }}">
+            <img src="https://tse-mm.bing.com/th?q={{ item[0] | urlencode }}" alt="{{ item[0] }} 场景图" loading="lazy">
+          </a>
+          <h3><a href="{{ item[1] }}">{{ item[0] }}</a></h3>
+          <p>围绕 {{ item[0] }} 的实际场景整理步骤、注意点与设备差异。</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>

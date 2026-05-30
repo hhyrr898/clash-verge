@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+---
+<main>
+  <article class="article-hero">
+    <div class="container article-shell">
+      <p class="eyebrow">{{ category or "指南" }}</p>
+      <h1>{{ title }}</h1>
+      <p class="lead">{{ description }}</p>
+      <div class="article-meta">
+        <time datetime="{{ page.date | htmlDateString }}">{{ page.date | dateText }}</time>
+        {% if tags %}
+          <span>·</span>
+          {% for tag in tags %}
+            {% if tag != "posts" %}
+              <a href="{{ tag | tagUrl }}">{{ tag }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+      <img class="hero-image" src="https://tse-mm.bing.com/th?q={{ imageKeyword or title | urlencode }}" alt="{{ title }} 主题配图" loading="eager">
+    </div>
+  </article>
+
+  <div class="container content-grid">
+    <article class="prose">
+      {{ content | safe }}
+      {% if video %}
+      <section class="video-card" aria-labelledby="video-title">
+        <h2 id="video-title">{{ videoTitle or title }}</h2>
+        {% if videoDescription %}<p>{{ videoDescription }}</p>{% endif %}
+        <video controls preload="metadata" poster="https://tse-mm.bing.com/th?q={{ imageKeyword or title | urlencode }}">
+          <source src="{{ video }}" type="video/mp4">
+          当前浏览器不支持视频播放。
+        </video>
+      </section>
+      {% endif %}
+    </article>
+    <aside class="side-panel" aria-label="相关文章">
+      <h2>延伸阅读</h2>
+      <ul>
+        {% for post in collections.posts | limit(8) %}
+          {% if post.url != page.url %}
+          <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <a class="soft-button" href="/download.html">前往下载中心</a>
+    </aside>
+  </div>
+</main>

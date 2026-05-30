@@ -1,0 +1,6 @@
+name = "clash-verge-hub"
+main = "workers/indexnow-key-worker.js"
+compatibility_date = "2026-05-30"
+
+[site]
+bucket = "_site"

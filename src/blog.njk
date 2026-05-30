@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+pageTitle: Clash Verge 使用文章与配置指南
+description: 汇总 Clash Verge 安装、下载、配置、设备连接与日常使用文章。
+pagination:
+  data: collections.posts
+  size: 12
+  alias: posts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+<main class="light-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="color:#0f5db8;">Clash Verge Blog</p>
+        <h1 class="page-title-white">Clash Verge 使用文章与配置指南</h1>
+        <p>围绕桌面端、移动端、订阅管理和日常连接整理可阅读的内容。</p>
+      </div>
+      <a class="soft-button" style="color:#152033;" href="/download.html">下载中心</a>
+    </div>
+    <div class="post-list">
+      {% for post in posts %}
+      <article class="post-card">
+        <a class="post-image-link" href="{{ post.url }}" aria-label="打开 {{ post.data.title }}">
+          <img src="https://tse-mm.bing.com/th?q={{ post.data.imageKeyword or post.data.title | urlencode }}" alt="{{ post.data.title }} 配图" loading="lazy">
+        </a>
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | dateText }}</time>
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <p>{{ post.data.description }}</p>
+        <div class="tags">
+          {% for tag in post.data.tags %}
+            {% if tag != "posts" %}<span>{{ tag }}</span>{% endif %}
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</main>
