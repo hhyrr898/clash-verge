@@ -47,13 +47,13 @@ jobs:
         id: commit
         shell: bash
         run: |
-          if git diff --quiet; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/blog
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/blog generated-urls.json
           git commit -m "Add generated Clash Verge article"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
