@@ -3,7 +3,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 
 const count = Math.max(1, Math.min(9, Number(process.env.ARTICLE_COUNT || "1")));
-const siteUrl = normalizeSiteUrl(process.env.SITE_URL || process.env.SITE_DOMAIN || "https://example.com");
+const siteUrl = normalizeSiteUrl(process.env.SITE_URL || process.env.SITE_DOMAIN || "https://clashverge-pc.com");
 const apiKey = process.env.GEMINI_API_KEY || "";
 const outDir = path.join(process.cwd(), "src", "blog");
 const generated = [];

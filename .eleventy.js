@@ -1,4 +1,15 @@
+import siteData from "./src/_data/site.json" with { type: "json" };
+
 export default function(eleventyConfig) {
+  eleventyConfig.addGlobalData("site", () => {
+    const site = { ...siteData };
+    const raw = (process.env.SITE_URL || process.env.SITE_DOMAIN || "").trim().replace(/\/+$/, "");
+    if (raw) {
+      site.url = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+    }
+    return site;
+  });
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addWatchTarget("src/assets");

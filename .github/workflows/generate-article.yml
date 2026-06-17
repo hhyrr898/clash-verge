@@ -41,6 +41,8 @@ jobs:
         run: npm run generate:article
 
       - name: Build
+        env:
+          SITE_URL: ${{ vars.SITE_URL || vars.SITE_DOMAIN || secrets.SITE_URL || secrets.SITE_DOMAIN }}
         run: npm run build
 
       - name: Commit changes
