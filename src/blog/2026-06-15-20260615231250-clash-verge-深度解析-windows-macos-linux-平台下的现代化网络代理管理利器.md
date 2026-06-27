@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: "Clash Verge 深度解析：Windows/macOS/Linux 平台下的现代化网络代理管理利器"
 description: "Clash Verge 是一款基于 Clash Core 的跨平台桌面代理客户端，凭借其直观的用户界面、丰富的功能和对多种代理协议的支持，成为 Windows、macOS 和 Linux 用户管理网络代理的理想选择。本文将深入介绍 Clash Verge 的核心优势、主要功能及简易上手教程。"
 date: 2026-06-15T23:13:05.575Z
+noindex: true
 category: "安装教程"
 tags: ["posts","节点选择","连接设置","使用技巧"]
 imageKeyword: "Clash Verge interface"

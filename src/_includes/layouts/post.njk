@@ -9,6 +9,10 @@ layout: layouts/base.njk
       <p class="lead">{{ description }}</p>
       <div class="article-meta">
         <time datetime="{{ page.date | htmlDateString }}">{{ page.date | dateText }}</time>
+        {% if updated %}
+          <span>·</span>
+          <span>更新于 {{ updated | dateText }}</span>
+        {% endif %}
         {% if tags %}
           <span>·</span>
           {% for tag in tags %}
@@ -49,3 +53,50 @@ layout: layouts/base.njk
     </aside>
   </div>
 </main>
+
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": page.date | htmlDateString,
+  "dateModified": updated or (page.date | htmlDateString),
+  "author": {
+    "@type": "Organization",
+    "name": site.author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": site.brand,
+    "url": site.url
+  },
+  "mainEntityOfPage": site.url + page.url
+} | dump | safe }}
+</script>
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": site.url + "/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "博客",
+      "item": site.url + "/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": title,
+      "item": site.url + page.url
+    }
+  ]
+} | dump | safe }}
+</script>
