@@ -1,5 +1,4 @@
 ---
-noindex: true
 layout: layouts/post.njk
 title: "Clash Verge 对比 Clash for Windows：迁移理由与实操"
 description: "Clash for Windows 已于 2023 年 11 月停止维护，我把日常代理迁到了 Clash Verge Rev。这篇从内核、TUN、界面和配置管理四个角度对比两者，并给出 4 步迁移操作、常见问题，以及我在"
