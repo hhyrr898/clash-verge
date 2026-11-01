@@ -6,11 +6,11 @@
   "slugPrefix": "clash-verge",
   "keywordsPath": "src/keywords.json",
   "linkPool": [
-    "/blogclash-verge-android-guide/",
-    "/blogclash-verge-backup-config/",
-    "/blogclash-verge-browser-check/",
-    "/blogclash-verge-clean-uninstall/",
-    "/blogclash-verge-dashboard-guide/"
+    "/blog/clash-verge-android-guide/",
+    "/blog/clash-verge-backup-config/",
+    "/blog/clash-verge-browser-check/",
+    "/blog/clash-verge-clean-uninstall/",
+    "/blog/clash-verge-dashboard-guide/"
   ],
   "minChars": 750,
   "maxChars": 2200,
