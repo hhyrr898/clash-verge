@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 影音应用访问体验与分组选择
 description: 介绍 Clash Verge 在影音应用场景下的分组选择、连接检查和体验判断。

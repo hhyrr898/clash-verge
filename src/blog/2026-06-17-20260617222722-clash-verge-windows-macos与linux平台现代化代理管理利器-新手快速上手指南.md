@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows、macOS与Linux平台现代化代理管理利器，新手快速上手指南"
 description: "本文详细介绍了Clash Verge这款跨平台Clash GUI客户端的下载、安装、订阅配置与高级功能，助您在Windows、macOS和Linux上轻松实现高效代理管理。"

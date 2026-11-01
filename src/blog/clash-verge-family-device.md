@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 家庭多设备使用与配置命名建议
 description: 整理 Clash Verge 在家庭电脑、手机和平板之间使用时的配置命名和维护方式。

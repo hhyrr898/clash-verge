@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 桌面快捷操作与常用入口整理
 description: 介绍 Clash Verge 桌面快捷入口、托盘菜单、常用按钮和使用习惯。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows 与 macOS 用户首选的现代化 Clash 代理图形界面深度解析"
 description: "Clash Verge 是一款基于 Clash 内核开发的免费开源代理管理工具，为 Windows 和 macOS 用户提供了简洁直观的图形界面，极大简化了复杂代理配置过程，助您轻松管理网络流量，安全高效地访问全球网络资源。"

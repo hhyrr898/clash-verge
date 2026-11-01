@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows/macOS/Linux 桌面代理管理新选择与高效使用指南"
 description: "Clash Verge 是一款基于 Clash Premium 内核，提供现代化用户界面的跨平台代理工具。它简化了 Windows、macOS 和 Linux 用户管理网络代理的复杂性，提供直观的配置管理、实时连接监控和灵活的路由策略，是提升上网体验的理想选择。"

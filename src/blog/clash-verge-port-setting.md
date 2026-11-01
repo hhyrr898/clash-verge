@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 端口设置说明与本地连接检查
 description: 介绍 Clash Verge 本地端口、应用连接方式和桌面端检查步骤。

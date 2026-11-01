@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge TUN 模式理解与适用场景说明
 description: 说明 Clash Verge TUN 模式的作用、适用应用和开启前的检查事项。

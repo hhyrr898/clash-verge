@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 界面主题选择与阅读舒适度设置
 description: 说明 Clash Verge 界面主题、显示习惯和长时间使用时的舒适度设置。

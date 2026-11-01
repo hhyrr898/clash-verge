@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows/macOS用户不可错过的Clash核心图形界面客户端详解"
 description: "Clash Verge是一款基于Clash核心开发的强大网络代理客户端，以其简洁的界面、丰富的功能和跨平台支持，为Windows和macOS用户提供了卓越的网络管理体验。本文将深入介绍其特性与使用方法，助您轻松驾驭网络。"

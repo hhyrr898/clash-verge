@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 日志查看方法与异常提示理解
 description: 说明 Clash Verge 日志面板的用途、常见提示含义和连接异常时的观察顺序。

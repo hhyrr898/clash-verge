@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge 深度解析：Windows、macOS 与 Linux 用户的桌面代理终极选择"
 description: "本文将为您深入介绍 Clash Verge 这款基于 Clash Meta 内核的强大桌面代理客户端，涵盖其安装配置、核心功能、以及如何利用其优势在 Windows、macOS 和 Linux 系统上获得流畅、安全的网络体验。"

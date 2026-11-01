@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 版本更新检查与旧配置保留方法
 description: 说明 Clash Verge 更新前准备、旧配置保留、版本变化检查和更新后的确认步骤。

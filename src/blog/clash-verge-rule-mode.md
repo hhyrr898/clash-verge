@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 规则模式选择与常用分组说明
 description: 说明 Clash Verge 规则模式、直连场景、代理场景和分组切换的日常使用方法。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 办公网络使用注意事项与连接检查
 description: 介绍 Clash Verge 在办公网络环境中的连接检查、应用差异和使用注意事项。

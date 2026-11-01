@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 卸载前配置保存与重新安装说明
 description: 说明 Clash Verge 卸载前的配置保存、重新安装后的恢复步骤和注意事项。

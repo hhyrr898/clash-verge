@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 游戏延迟观察与节点切换思路
 description: 说明 Clash Verge 在游戏场景中的延迟观察、节点切换和连接稳定性判断方法。

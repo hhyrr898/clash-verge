@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 移动网络与 Wi-Fi 切换使用说明
 description: 说明 Clash Verge 在移动网络、家庭 Wi-Fi 和公共网络之间切换时的检查方法。

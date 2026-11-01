@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 路由分组选择与应用访问体验
 description: 整理 Clash Verge 路由分组、应用访问表现和分组切换时的观察方法。

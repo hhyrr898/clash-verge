@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge 教程：macOS、Windows、Linux 全平台代理利器，告别繁琐设置，畅享网络自由"
 description: "本文详细介绍了 Clash Verge 这款强大且用户友好的 Clash 桌面客户端。从安装部署到配置文件导入，再到高级规则设置与个性化定制，助您轻松驾驭 Clash Verge，实现高效、稳定的网络代理体验。"

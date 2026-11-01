@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge 深度指南：Windows、macOS、Linux 下新一代 Clash 客户端的安装、配置与高级使用技巧"
 description: "Clash Verge 作为 Clash for Windows 的继任者，凭借其现代化的界面和强大的功能，正成为越来越多用户首选的网络代理工具。本文将为您详细介绍如何在不同操作系统上轻松安装、配置并高效使用 Clash Verge，助您充分利用其强大特性，优化您的网络体验。"

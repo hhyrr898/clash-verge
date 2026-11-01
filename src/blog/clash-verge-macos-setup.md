@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge macOS 设置教程与菜单栏使用说明
 description: 说明 Clash Verge 在 macOS 上的权限提示、菜单栏入口、启动项和常用设置流程。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 配置备份方式与换机恢复流程
 description: 整理 Clash Verge 配置备份、订阅记录保存、换机恢复和重新导入时的检查要点。

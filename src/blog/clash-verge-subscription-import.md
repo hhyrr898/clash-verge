@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 订阅导入方法与配置更新流程
 description: 介绍 Clash Verge 订阅链接导入、本地文件导入、配置刷新和常见状态检查方式。

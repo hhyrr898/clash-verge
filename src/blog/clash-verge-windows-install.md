@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge Windows 安装教程与首次启动设置
 description: 面向 Windows 用户整理 Clash Verge 安装前准备、启动检查、界面认识与常用开关位置。

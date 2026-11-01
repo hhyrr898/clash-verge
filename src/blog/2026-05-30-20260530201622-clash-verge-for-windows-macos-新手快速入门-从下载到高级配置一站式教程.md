@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge for Windows/macOS：新手快速入门，从下载到高级配置一站式教程"
 description: "Clash Verge 是一款基于 Clash 内核、拥有现代化界面的跨平台代理工具。本文将为您详细介绍 Clash Verge 的核心功能、安装步骤以及如何进行基础配置，帮助您快速上手，享受流畅的网络体验。"

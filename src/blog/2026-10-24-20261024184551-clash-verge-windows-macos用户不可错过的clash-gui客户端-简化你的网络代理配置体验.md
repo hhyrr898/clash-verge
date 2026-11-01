@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows/macOS用户不可错过的Clash GUI客户端，简化你的网络代理配置体验"
 description: "探索Clash Verge，一款功能强大且界面友好的Clash GUI客户端。本文将带你了解其核心优势、详细的下载安装步骤以及如何高效进行代理配置，助你轻松管理网络连接。"

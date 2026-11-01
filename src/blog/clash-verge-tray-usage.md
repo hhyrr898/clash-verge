@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 托盘菜单使用方法与快速切换技巧
 description: 整理 Clash Verge 托盘菜单入口、连接开关、配置切换和桌面端快速操作方法。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge DNS 设置理解与常见连接问题
 description: 介绍 Clash Verge DNS 设置的作用、常见连接异常和排查时的观察方法。

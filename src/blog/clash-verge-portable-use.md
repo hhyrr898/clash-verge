@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 便携使用方式与配置迁移建议
 description: 介绍 Clash Verge 在临时设备、备用电脑和换机环境中的配置迁移思路。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows、macOS 和 Linux 上的一站式 Clash GUI 客户端，深度解析其功能与使用指南"
 description: "探索 Clash Verge，一款功能强大且界面现代的 Clash 图形用户界面客户端。本文将详细介绍它如何简化您的网络代理管理，提供跨平台支持、灵活的规则配置和直观的操作体验，助您轻松驾驭网络连接。"

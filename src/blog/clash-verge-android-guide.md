@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge Android 使用准备与连接状态说明
 description: 整理 Android 设备使用 Clash Verge 前的权限检查、连接状态理解和日常维护方法。

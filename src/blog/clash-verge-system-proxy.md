@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 系统代理开关与浏览器访问说明
 description: 介绍 Clash Verge 系统代理开关、浏览器访问表现和桌面应用连接差异。

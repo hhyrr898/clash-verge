@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 异常重启处理与状态恢复步骤
 description: 整理 Clash Verge 异常退出、重启后状态检查和配置恢复的处理顺序。

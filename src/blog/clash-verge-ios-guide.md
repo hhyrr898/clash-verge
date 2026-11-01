@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge iOS 连接思路与设备使用指南
 description: 面向 iPhone 与 iPad 用户整理 Clash Verge 相关连接思路、设备差异和使用注意事项。

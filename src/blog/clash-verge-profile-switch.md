@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 配置切换方法与多场景使用习惯
 description: 整理 Clash Verge 多配置切换、命名方式和不同网络环境下的使用建议。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 浏览器访问检查与插件冲突处理
 description: 整理 Clash Verge 配合浏览器使用时的访问检查、插件影响和排查顺序。

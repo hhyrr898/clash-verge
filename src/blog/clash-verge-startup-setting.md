@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 开机启动设置与后台运行说明
 description: 说明 Clash Verge 开机启动、后台运行、托盘图标和桌面端使用习惯。

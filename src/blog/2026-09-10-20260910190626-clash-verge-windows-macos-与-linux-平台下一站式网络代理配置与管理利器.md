@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows、macOS 与 Linux 平台下一站式网络代理配置与管理利器"
 description: "深入了解 Clash Verge，这款基于 Clash Meta 内核的跨平台图形化客户端，它以直观的用户界面、强大的订阅管理和灵活的规则配置，为您的网络连接带来前所未有的便捷与高效体验。"

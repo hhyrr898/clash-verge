@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：现代桌面代理工具，Windows/macOS/Linux多平台配置与使用详解"
 description: "深入了解Clash Verge这款功能强大、界面美观的跨平台代理客户端。本文将带您探索Clash Verge的核心特性、安装配置以及如何优化您的网络体验，助您无忧畅游互联网。"

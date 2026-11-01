@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 面板功能介绍与常用区域说明
 description: 介绍 Clash Verge 主面板中的配置、节点、规则、日志和状态区域。

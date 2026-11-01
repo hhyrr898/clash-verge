@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge：Windows/macOS/Linux 桌面代理的优选方案与配置详解"
 description: "本文将详细介绍 Clash Verge 这款桌面代理工具，涵盖其核心功能、安装步骤、基本配置以及高级使用技巧，帮助您轻松搭建和管理个性化的网络代理环境。"

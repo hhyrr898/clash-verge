@@ -22,7 +22,7 @@ layout: layouts/base.njk
           {% endfor %}
         {% endif %}
       </div>
-      <img class="hero-image" src="https://tse-mm.bing.com/th?q={{ imageKeyword or title | urlencode }}" alt="{{ title }} 主题配图" loading="eager">
+      <img class="hero-image" {% if cover %}src="{{ cover }}"{% else %}src="https://tse-mm.bing.com/th?q={{ imageKeyword or title | urlencode }}"{% endif %} alt="{{ title }} 主题配图" loading="eager">
     </div>
   </article>
 

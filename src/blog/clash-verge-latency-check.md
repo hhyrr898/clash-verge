@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: Clash Verge 节点延迟查看与连接体验判断
 description: 说明 Clash Verge 延迟测试、节点选择、连接体验判断和异常时的处理顺序。

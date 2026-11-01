@@ -1,0 +1,26 @@
+{
+  "brand": "Clash Verge",
+  "domain": "clashverge-pc.com",
+  "locale": "zh-CN",
+  "blogDir": "src/blog",
+  "slugPrefix": "clash-verge",
+  "keywordsPath": "src/keywords.json",
+  "linkPool": [
+    "/blogclash-verge-android-guide/",
+    "/blogclash-verge-backup-config/",
+    "/blogclash-verge-browser-check/",
+    "/blogclash-verge-clean-uninstall/",
+    "/blogclash-verge-dashboard-guide/"
+  ],
+  "minChars": 750,
+  "maxChars": 2200,
+  "fm": {
+    "layout": "layouts/post.njk",
+    "hasCategory": true,
+    "tagsStyle": "json",
+    "firstTag": "posts",
+    "permalink": false,
+    "coverKey": "cover",
+    "coverDir": "/static/posts/"
+  }
+}
