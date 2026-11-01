@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge Windows 安装教程：从下载到首次启动"
 description: "面向 Windows 用户的 Clash Verge Rev 安装实操指南。从确认版本号、下载安装包、处理 TUN 系统服务，到首次启动导入订阅并检查内核，逐步走完整个流程，同时整理首次启动阶段最常遇到的四类问题与排查思"

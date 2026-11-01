@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge 订阅更新失败：原因与修复步骤"
 description: "Clash Verge 订阅更新失败是常见问题，本文基于 Clash Verge Rev 2.0.0 版本（2025年3月发布），分析订阅更新失败的六大原因，提供四步排查修复方法，并解答常见疑问。内容涵盖配置文件路径、T"

@@ -1,4 +1,5 @@
 ---
+noindex: true
 layout: layouts/post.njk
 title: "Clash Verge 内核升级与回退：mihomo 实操记录"
 description: "记录一次 Clash Verge Rev 的 mihomo 内核排查过程：从界面与日志确认内核版本，到手动升级、锁定版本与回退旧内核的完整步骤，附带 TUN 模式对系统服务的依赖说明，以及升级后订阅不更新、内核启动失败等"
