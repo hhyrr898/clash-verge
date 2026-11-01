@@ -1,5 +1,4 @@
 ---
-noindex: true
 layout: layouts/post.njk
 title: "Clash Verge TUN 模式配置指南：服务模式与虚拟网卡"
 description: "本文以 Clash Verge Rev v2.4.2 为例，手把手教你配置 TUN 模式：从安装服务模式到验证虚拟网卡，包含四步操作指南和三个常见问题解答，并分享我遇到的两个坑。"
